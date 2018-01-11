@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <style>
+    #circlemask {
+      fill: #fff;
+    }
+
+    .maskinner {
+      animation: shrink .4s 1 linear; 
+      transform-origin: 50%;
+      fill: #000;
+    }
+
+    .circleout {
+      mask: url(#circlemask);  
+    }
+
+    @keyframes shrink {
+      from {
+        transition-timing-function: ease-in-out;
+        transform: scale(1);
+        fill: #fff;
+      }
+      to {
+        transition-timing-function: ease-in-out;
+        transform: scale(0);
+        fill: #fff;
+      }
+    }
+  </style>
+  <defs>
+    <mask id="circlemask">
+      <circle class="maskinner" fill="#fff" cx="5" cy="5" r="8"/>
+    </mask>
+  </defs>
+  <g>
+  <rect class="circleout" x="0" y="0" height="10" width="10"/>
+  </g>
+</svg>
