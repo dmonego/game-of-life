@@ -8,14 +8,18 @@ import { createStore } from 'redux';
 import './App.css';
 
 function getInitialState() {
+  var glider = Set([ '2,1', '3,2', '1,3', '2,3', '3,3']);
+  var heart = Set(['20,5', '20,6', '21,6', '21,7', '22,7', '22,8', '23,7', '23,6', '24,6', '24,5']);
+  var layout = glider.union(heart);
   var state = {
                 board: {
-                  width: 40,
-                  height: 20,
+                  paused: true,
+                  width: 60,
+                  height: 30,
                   // Layout uses x,y coordinates
                   //  0,0 is the top left
-                  layout: Set([ '2,1', '3,2', '1,3', '2,3', '3,3']),
-                  born: Set([ '2,1', '3,2', '1,3', '2,3', '3,3'])
+                  layout: layout,
+                  born: layout
                 }
               };
   return state;

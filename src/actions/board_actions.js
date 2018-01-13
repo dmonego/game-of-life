@@ -13,4 +13,15 @@ var step = () => {
     }
 }
 
-export { toggle_cell, step };
+var autostep_start = (dispatch) => {
+    setInterval(() => dispatch({type: 'AUTOSTEP'}), 600);
+}
+
+
+var toggle_play = () => {
+    return {
+        type: "TOGGLE_PLAY"
+    }
+}
+
+export { toggle_cell, step, autostep_start, toggle_play};

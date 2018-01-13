@@ -1,4 +1,4 @@
-import { Map, Set } from 'immutable';
+import { Set } from 'immutable';
 
 var generateNeighbors = (coord) => {
     var [x, y] = coord.split(",").map(Number);
@@ -29,9 +29,9 @@ var runGol = (board) => {
                 return true;
             if (value > 3)
                 return false;
-        } else {
-            return value === 3;
         }
+        //Test if we should create a new item.
+        return value === 3;
     }).keySeq().toSet();
     return results;
 }
@@ -75,6 +75,15 @@ const boardReducer = (state, action) => {
             return newLayout(state, toggle(state.get('layout'), action.cell_coords));
         case 'STEP':
             return newLayout(state, runGol(state.get('layout')));
+        case 'AUTOSTEP':
+            if(!state.get('paused')) {
+                return newLayout(state, runGol(state.get('layout')));
+            }
+            break;
+        case 'TOGGLE_PLAY':
+            return state.set("paused", !state.get('paused'))
+        default:
+            break;
     }
     return state;
 }

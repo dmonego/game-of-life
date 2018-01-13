@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" viewPort="0 0 10 10">
   <style>
     #circlemask {
       fill: #fff;
@@ -32,7 +32,5 @@
       <circle class="maskinner" fill="#fff" cx="5" cy="5" r="8"/>
     </mask>
   </defs>
-  <g>
   <rect class="circleout" x="0" y="0" height="10" width="10"/>
-  </g>
 </svg>

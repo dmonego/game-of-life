@@ -9,8 +9,8 @@ import { Set } from 'immutable';
 class Board extends Component {
 
     render () {
-        var height = 20;
-        var width = 25;
+        var height = this.props.height;
+        var width = this.props.width;
         var rows = _.range(height).map( y => {
             return (<tr key={y}>
                     {_.range(width).map(x => {
@@ -25,13 +25,12 @@ class Board extends Component {
                         if (this.props.alive.contains(keyval)) {
                             status = 'ALIVE';
                         }
-                        return <Cell key="keyval" status={status} onClick={() => toggle_cell(keyval)} />;
+                        return (<td key={keyval}><Cell coord={keyval} status={status} onClick={() => this.props.dispatch(toggle_cell(keyval))} /></td>);
                     })}
                 </tr>);
         });
-        console.log(JSON.stringify(this.props));
-        return <div>
-            <table><tbody>{rows}</tbody></table>
+        return <div className="boardParent">
+            <table className="golBoard"><tbody>{rows}</tbody></table>
         </div>
     }
 }

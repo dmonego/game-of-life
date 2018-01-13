@@ -1,0 +1,22 @@
+
+.golBoard {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.golBoard tr td {
+    background-color: #CCC;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+.golBoard img{
+    vertical-align: top;
+}
+
+.boardParent {
+    margin-top: 40px;
+    width: 100%;
+}
