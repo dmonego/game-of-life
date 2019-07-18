@@ -33,4 +33,5 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: ./node_modules/.bin/jest --ci
+      - run: yarn test --ci
+
