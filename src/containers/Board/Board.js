@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { _ } from 'underscore';
 import './Board.css';
-import { toggle_cell } from 'actions/board_actions';
-import Cell from 'components/Cell/Cell';
+import { toggle_cell } from '../../actions/board_actions';
+import Cell from '../../components/Cell/Cell';
 import { Set } from 'immutable';
 
 class Board extends Component {

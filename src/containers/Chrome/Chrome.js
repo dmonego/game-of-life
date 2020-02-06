@@ -4,8 +4,8 @@ import './Chrome.css';
 import pause from './pause.svg';
 import play from './play.svg';
 import step_button from './step.svg';
-import Board from 'containers/Board/Board'
-import { step, autostep_start, toggle_play } from 'actions/board_actions.js';
+import Board from '../../containers/Board/Board'
+import { step, autostep_start, toggle_play } from '../../actions/board_actions.js';
 
 class Chrome extends Component {
     componentWillMount () {

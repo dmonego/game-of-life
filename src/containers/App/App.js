@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { combineReducers} from 'redux-immutable';
 import { Provider } from 'react-redux';
-import { boardReducer } from 'reducers/boardReducer.js';
-import Chrome from 'containers/Chrome/Chrome';
+import { boardReducer } from '../../reducers/boardReducer.js';
+import Chrome from '../../containers/Chrome/Chrome';
 import { fromJS, Set } from 'immutable';
 import { createStore } from 'redux';
 import './App.css';
