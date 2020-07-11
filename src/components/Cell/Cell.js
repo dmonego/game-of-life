@@ -29,7 +29,9 @@ class Cell extends Component {
         }
         //Cache bust so chrome plays the animation
         count++;
-        return (<a onClick={this.props.onClick}><img src={src } alt={alt} height="20" width="20" /></a>)
+        return (<button class="cell" onClick={this.props.onClick}>
+            <img src={src} alt={alt} height="20" width="20" />
+        </button>);
     }
 }
 

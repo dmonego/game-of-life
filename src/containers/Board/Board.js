@@ -25,7 +25,9 @@ class Board extends Component {
                         if (this.props.alive.contains(keyval)) {
                             status = 'ALIVE';
                         }
-                        return (<td key={keyval}><Cell coord={keyval} status={status} onClick={() => this.props.dispatch(toggle_cell(keyval))} /></td>);
+                        return (<td key={keyval}>
+                            <Cell coord={keyval} status={status} onClick={() => this.props.dispatch(toggle_cell(keyval))} />
+                        </td>);
                     })}
                 </tr>);
         });

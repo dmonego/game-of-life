@@ -9,6 +9,9 @@
     width: 200px;
 }
 
-.controls .control-button {
-
+.control-button {
+    margin: 0px;
+    padding: 0px;
+    background: none;
+    border: none;
 }
