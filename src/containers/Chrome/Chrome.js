@@ -18,8 +18,8 @@ class Chrome extends Component {
         return <div>
             <Board />
             <div className="controls">
-                <a className="control-button" onClick={() => this.props.dispatch(step())} ><img src={step_button} alt="Run one Step"/></a>
-                <a className="control-button" onClick={() => this.props.dispatch(toggle_play())} ><img src={play_pause_src} alt={play_pause_alt}/></a>
+                <button className="control-button" onClick={() => this.props.dispatch(step())} ><img src={step_button} alt="Run one Step"/></button>
+                <button className="control-button" onClick={() => this.props.dispatch(toggle_play())} ><img src={play_pause_src} alt={play_pause_alt}/></button>
             </div>
         </div>
     }
