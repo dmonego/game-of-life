@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { _ } from 'underscore';
+import { range } from 'underscore';
 import './Board.css';
 import { toggle_cell } from '../../actions/board_actions';
 import Cell from '../../components/Cell/Cell';
@@ -11,9 +11,9 @@ class Board extends Component {
     render () {
         var height = this.props.height;
         var width = this.props.width;
-        var rows = _.range(height).map( y => {
+        var rows = range(height).map( y => {
             return (<tr key={y}>
-                    {_.range(width).map(x => {
+                    {range(width).map(x => {
                         var keyval = (x+1)+','+ (y+1);
                         var status = null;
                         if (this.props.dead.contains(keyval)) {
